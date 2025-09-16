@@ -6,7 +6,7 @@ function preloadImages(urls) {
 }
 
 preloadImages([
-  "../images/outer_space.jpg",
-  "../images/orange_theme.jpg",
-  "../images/pink_theme.jpg"
+  "../images/space_background.jpg",
+  "../images/orange_background.jpg",
+  "../images/pink_background.jpg"
 ]);
