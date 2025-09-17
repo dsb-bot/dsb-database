@@ -10,3 +10,19 @@ preloadImages([
   "../images/orange_background.jpg",
   "../images/pink_background.jpg"
 ]);
+
+// Lädt externes HTML in den Container
+function loadList() {
+  fetch('assets/plan_list.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Netzwerkfehler beim Laden von list.html');
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('list-container').innerHTML = html;
+    })
+    .catch(err => console.error(err));
+}
+
+// Beim Laden der Seite aufrufen
+window.addEventListener('DOMContentLoaded', loadList);
